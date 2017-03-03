@@ -12,8 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
+    @IBOutlet weak var pickerFromTextField: UITextField!
+    @IBOutlet weak var pickerToTextField: UITextField!
     
-    //var data = NSMutableData()
+    var selection = ["English", "French", "German", "Irish", "Italian", "Spanish", "Polish", "Russian"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,43 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getLanguage()->String{
+        var to:String
+        var from:String
+        switch(pickerFromTextField.text){
+        case "English"?:
+            from = "en"
+        case "French"?:
+            from = "fr"
+        case "Turkish"?:
+            from = "tr"
+        case "Gaelic"?:
+            from = "ga"
+        case "Hindi"?:
+            from = "hi"
+        default:
+            from = "en"
+        }
+        
+        switch(pickerToTextField.text){
+        case "English"?:
+            to = "en"
+        case "French"?:
+            to = "fr"
+        case "Turkish"?:
+            to = "tr"
+        case "Gaelic"?:
+            to = "ga"
+        case "Hindi"?:
+            to = "hi"
+        default:
+            to = "fr"
+        }
+        
+        let fromTo = from+"|"+to
+        return fromTo
     }
     
     @IBAction func translate(_ sender: AnyObject) {
