@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,44 +17,183 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="&lt;Text to Translate&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
-                                <frame key="frameInset" minX="16" minY="28" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
+                                <rect key="frame" x="16" y="28" width="343" height="113"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="9A9-Dc-p8d"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk9-7M-DEK">
-                                <frame key="frameInset" minX="155.5" minY="546" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Translate"/>
-                                <connections>
-                                    <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOY-mV-yWw"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="&lt;Translated Text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-KV-DTJ">
-                                <frame key="frameInset" minX="16" minY="193" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Translated Text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-KV-DTJ">
+                                <rect key="frame" x="16" y="204" width="343" height="128"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="S8y-W1-FWG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNl-xW-OVP">
+                                <rect key="frame" x="170" y="155" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Pgy-xp-pdw"/>
+                                    <constraint firstAttribute="height" constant="35" id="hNb-qb-rfm"/>
+                                </constraints>
+                                <state key="normal" image="arrows"/>
+                                <connections>
+                                    <action selector="swapText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JYh-CN-UkJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4D-Ay-qjz">
+                                <rect key="frame" x="9" y="481" width="45" height="22"/>
+                                <state key="normal" title="FR" image="FR">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bl-sN-cdl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbm-XQ-la1">
+                                <rect key="frame" x="8" y="519" width="46" height="22"/>
+                                <state key="normal" title="DE" image="DE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySd-md-ai2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lth-LG-zeL">
+                                <rect key="frame" x="9" y="557" width="45" height="22"/>
+                                <state key="normal" title="ES" image="ES">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8a-L9-eEm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-2Z-mJf">
+                                <rect key="frame" x="321" y="448" width="47" height="22"/>
+                                <state key="normal" title="EN" image="GB">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectTranslation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XuV-Da-Iaj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBM-Cz-4RY">
+                                <rect key="frame" x="322" y="481" width="45" height="22"/>
+                                <state key="normal" title="FR" image="FR">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectTranslation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjn-IX-0RD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfi-0J-KPG">
+                                <rect key="frame" x="321" y="519" width="46" height="22"/>
+                                <state key="normal" title="DE" image="DE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectTranslation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL3-We-Xuu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ku-xO-R1E">
+                                <rect key="frame" x="322" y="557" width="45" height="22"/>
+                                <state key="normal" title="ES" image="ES">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectTranslation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYc-Tk-4L2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk9-7M-DEK">
+                                <rect key="frame" x="112" y="454" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="W2N-AB-lTJ"/>
+                                </constraints>
+                                <state key="normal" title="Translate">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="779-io-DK6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCg-lZ-3EL">
+                                <rect key="frame" x="7" y="448" width="47" height="22"/>
+                                <state key="normal" title="EN" image="GB">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggC-VX-fXB"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.58431372549019611" green="1" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cbm-XQ-la1" firstAttribute="top" secondItem="Z4D-Ay-qjz" secondAttribute="bottom" constant="16" id="7sD-5d-THA"/>
+                            <constraint firstItem="vhr-2Z-mJf" firstAttribute="leading" secondItem="aBM-Cz-4RY" secondAttribute="leading" constant="-1" id="8Zj-IS-aq4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tk9-7M-DEK" secondAttribute="bottom" constant="183" id="8zJ-pj-emh"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="A7t-mb-EjK"/>
+                            <constraint firstItem="Lth-LG-zeL" firstAttribute="top" secondItem="cbm-XQ-la1" secondAttribute="bottom" constant="16" id="Bx9-er-xwF"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="centerX" secondItem="FNl-xW-OVP" secondAttribute="centerX" id="GyN-uh-lhP"/>
+                            <constraint firstItem="Z4D-Ay-qjz" firstAttribute="top" secondItem="QCg-lZ-3EL" secondAttribute="bottom" constant="11" id="L7s-pU-ghU"/>
+                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="112" id="NLt-NB-d2o"/>
+                            <constraint firstItem="aBM-Cz-4RY" firstAttribute="leading" secondItem="Vfi-0J-KPG" secondAttribute="leading" constant="1" id="P2p-Yq-AQp"/>
+                            <constraint firstItem="cbm-XQ-la1" firstAttribute="baseline" secondItem="Vfi-0J-KPG" secondAttribute="baseline" id="Pkl-AY-etM"/>
+                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="leading" secondItem="QCg-lZ-3EL" secondAttribute="leading" constant="9" id="Q8i-j2-qYX"/>
+                            <constraint firstItem="QCg-lZ-3EL" firstAttribute="baseline" secondItem="vhr-2Z-mJf" secondAttribute="baseline" id="SPb-Kp-FYp"/>
+                            <constraint firstItem="FNl-xW-OVP" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="14" id="Ssu-ZJ-EZN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tk9-7M-DEK" secondAttribute="trailing" constant="97" id="TCt-8U-U7v"/>
+                            <constraint firstItem="QCg-lZ-3EL" firstAttribute="top" secondItem="Tk9-7M-DEK" secondAttribute="top" constant="-6" id="TKK-5a-yTW"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="LaV-KV-DTJ" secondAttribute="trailing" id="Vjf-vq-70C"/>
+                            <constraint firstItem="Z4D-Ay-qjz" firstAttribute="baseline" secondItem="aBM-Cz-4RY" secondAttribute="baseline" id="X63-Ee-dPd"/>
+                            <constraint firstItem="Vfi-0J-KPG" firstAttribute="leading" secondItem="2ku-xO-R1E" secondAttribute="leading" constant="-1" id="XLX-pp-qpk"/>
+                            <constraint firstItem="cbm-XQ-la1" firstAttribute="leading" secondItem="Lth-LG-zeL" secondAttribute="leading" constant="-1" id="XcR-cC-wQL"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YBr-UE-xYL"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="LaV-KV-DTJ" secondAttribute="leading" id="ZPe-NE-NgY"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zxz-ye-onX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lth-LG-zeL" secondAttribute="bottom" constant="88" id="dis-zD-PPM"/>
+                            <constraint firstItem="Z4D-Ay-qjz" firstAttribute="leading" secondItem="cbm-XQ-la1" secondAttribute="leading" constant="1" id="iGv-lM-Z3H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vhr-2Z-mJf" secondAttribute="trailing" constant="-9" id="nDf-zH-TJn"/>
+                            <constraint firstItem="QCg-lZ-3EL" firstAttribute="leading" secondItem="Z4D-Ay-qjz" secondAttribute="leading" constant="-2" id="sY5-bB-a0w"/>
+                            <constraint firstItem="Lth-LG-zeL" firstAttribute="baseline" secondItem="2ku-xO-R1E" secondAttribute="baseline" id="tLN-Cl-klG"/>
+                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="FNl-xW-OVP" secondAttribute="bottom" constant="14" id="wrn-ht-ba0"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="textToTranslate" destination="dii-Vg-90N" id="O1N-fv-MHA"/>
-                        <outlet property="translatedText" destination="LaV-KV-DTJ" id="D2R-Wy-rRy"/>
+                        <outlet property="deButton" destination="cbm-XQ-la1" id="OxD-4X-2At"/>
+                        <outlet property="deTransButton" destination="Vfi-0J-KPG" id="RdL-Ez-gmQ"/>
+                        <outlet property="enButton" destination="QCg-lZ-3EL" id="OFK-CT-PIq"/>
+                        <outlet property="enTransButton" destination="vhr-2Z-mJf" id="PeE-6s-BW0"/>
+                        <outlet property="esButton" destination="Lth-LG-zeL" id="hQs-E3-qg4"/>
+                        <outlet property="esTransButton" destination="2ku-xO-R1E" id="Hgx-6C-zu3"/>
+                        <outlet property="frButton" destination="Z4D-Ay-qjz" id="44i-fy-Jzq"/>
+                        <outlet property="frTransButton" destination="aBM-Cz-4RY" id="chR-aC-tfb"/>
+                        <outlet property="textToTranslate" destination="dii-Vg-90N" id="L4z-3E-LIh"/>
+                        <outlet property="translatedText" destination="LaV-KV-DTJ" id="7zP-s5-tTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="388.15592203898052"/>
+            <point key="canvasLocation" x="330.39999999999998" y="387.25637181409297"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DE" width="23" height="17"/>
+        <image name="ES" width="23" height="17"/>
+        <image name="FR" width="23" height="17"/>
+        <image name="GB" width="23" height="17"/>
+        <image name="arrows" width="400" height="400"/>
+    </resources>
 </document>

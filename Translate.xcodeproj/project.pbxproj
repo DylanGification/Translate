@@ -7,17 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3642D09C1E72268200417BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3642D09B1E72268200417BCC /* ViewController.swift */; };
+		3642D0A21E722D2700417BCC /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */; };
+		3642D0A31E72310700417BCC /* NVActivityIndicatorView.framework in Sources */ = {isa = PBXBuildFile; fileRef = 3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */; };
+		3642D0A41E72313500417BCC /* NVActivityIndicatorView.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */; };
+		3642D0A51E72317A00417BCC /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */; };
+		3642D0A61E72317A00417BCC /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
-		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
 		FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */; };
 		FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3642D0A71E72317A00417BCC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3642D0A61E72317A00417BCC /* NVActivityIndicatorView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3642D09B1E72268200417BCC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFD2F9B81BD1101A00F54057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFD2F9BB1BD1101A00F54057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD2F9C01BD1101A00F54057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3642D0A51E72317A00417BCC /* NVActivityIndicatorView.framework in Frameworks */,
+				3642D0A21E722D2700417BCC /* NVActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +77,12 @@
 			isa = PBXGroup;
 			children = (
 				FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */,
-				FFD2F9B81BD1101A00F54057 /* ViewController.swift */,
 				FFD2F9BA1BD1101A00F54057 /* Main.storyboard */,
 				FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */,
 				FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */,
 				FFD2F9C21BD1101A00F54057 /* Info.plist */,
+				3642D09B1E72268200417BCC /* ViewController.swift */,
+				3642D0A11E722D2700417BCC /* NVActivityIndicatorView.framework */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -74,6 +97,7 @@
 				FFD2F9AF1BD1101A00F54057 /* Sources */,
 				FFD2F9B01BD1101A00F54057 /* Frameworks */,
 				FFD2F9B11BD1101A00F54057 /* Resources */,
+				3642D0A71E72317A00417BCC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3642D0A41E72313500417BCC /* NVActivityIndicatorView.framework in Resources */,
 				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
@@ -135,7 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */,
+				3642D0A31E72310700417BCC /* NVActivityIndicatorView.framework in Sources */,
+				3642D09C1E72268200417BCC /* ViewController.swift in Sources */,
 				FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +280,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Translate",
+				);
 				INFOPLIST_FILE = Translate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.wit.Translate;
@@ -266,6 +296,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Translate",
+				);
 				INFOPLIST_FILE = Translate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.wit.Translate;
